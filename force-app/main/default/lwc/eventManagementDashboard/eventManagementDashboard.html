@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Event Dashboard">
+        <lightning-datatable
+            key-field="id"
+            data={eventData}
+            columns={eventColumns}
+            onrowaction={handleRowAction}
+            hide-checkbox-column>
+        </lightning-datatable>
+        <lightning-layout horizontal-align="center" class="slds-m-top_small">
+            <lightning-layout-item class="slds-var-p-right_medium">
+                <lightning-button
+                    variant="brand"
+                    label="Previous"
+                    onclick={handlePrevious}
+                    disabled={isFirstPage}>
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-m-right_medium">
+                <lightning-button
+                    variant="brand"
+                    label="Next"
+                    onclick={handleNext}
+                    disabled={isLastPage}>
+                </lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <template lwc:if={viewClick}>
+            <c-modal-form 
+                is-show-modal = {showModal} 
+                onclosemodal = {handleCloseModal}
+                event-id = {selectedEventId}
+                edit-form = {editForm}
+                view-form = {viewForm}
+                onsuccessevent = {handleSuccess}>
+            </c-modal-form>
+        </template>
+    </lightning-card>
+</template>

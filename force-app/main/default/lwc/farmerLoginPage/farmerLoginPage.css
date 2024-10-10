@@ -1,0 +1,94 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.form-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.next-button {
+    margin-top: 15px;
+}
+
+.language-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+/* Modal Styling for Mobile */
+.slds-modal__container {
+    max-width: none;
+    width: 85%;
+    height: 90vh;
+    border-radius: 0;
+    position: relative;
+}
+
+.slds-modal__content {
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f28b00;
+    padding: 5px;
+}
+
+/* Style the user selection list */
+.user-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.user-label {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+/* Modal Footer with Cancel and Continue Buttons */
+.slds-modal__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.slds-button_brand, .slds-button_neutral {
+    width: 45%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Additional styling for the modal header */
+.slds-modal__header h2 {
+    text-align: center;
+}

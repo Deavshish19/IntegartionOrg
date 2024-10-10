@@ -1,0 +1,38 @@
+<template>
+    <lightning-layout class="top-header" multiple-rows="true" vertical-align="center">
+        <lightning-layout-item size="1">
+            <div class="slds-p-around_medium" >
+                <lightning-button-icon icon-name="utility:back"  alternative-text="back" title="back" onclick={handleBack}></lightning-button-icon>
+             </div>
+        </lightning-layout-item>
+
+        <!-- Center - Home Label -->
+        <lightning-layout-item size="7" class="home-label">
+            <h1>Gat Members</h1>
+        </lightning-layout-item>
+    </lightning-layout> 
+    
+    <div class="header-info">
+        <p>Total Members: {totalMembers}</p>
+        <p>Total Area(Acre): {totalArea}</p>
+    </div>
+    
+    <div class="member-list">
+        <template for:each={members} for:item="member">
+            <div key={member.id} class="member-item">
+                <lightning-avatar src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" fallback-icon-name="standard:person_account" alternative-text="Amy Weaver" class="slds-m-right_small" variant="circle"></lightning-avatar>
+                <div class="member-info">
+                    <p class="member-name">{member.name}</p>
+                    <p class="member-phone">{member.phone}</p>
+                    <div class="role-badge">
+                        <lightning-badge label={member.role}></lightning-badge>
+                    </div>
+                </div>
+                <div class="member-acre">
+                    <p>{member.acre} acr</p>
+                </div>
+            </div>
+        </template>
+    </div>
+
+</template>

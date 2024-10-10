@@ -1,0 +1,116 @@
+<template>
+    <div class="home-page">
+        <lightning-layout class="top-header" multiple-rows="true" vertical-align="center">
+            <!-- Left - Hamburger Menu -->
+            <lightning-layout-item size="1">
+                <div class="slds-p-around_medium menu-icon">
+                    <lightning-button-menu alternative-text="Show menu" icon-name="utility:rows" onselect={handleMenuItem}>
+                       <lightning-menu-item label="Gat Member"  value="New" class="menu-item"></lightning-menu-item>
+                       <lightning-menu-item label="Gat Board" value="Edit" class="menu-item"></lightning-menu-item>
+                    </lightning-button-menu>
+                 </div>
+            </lightning-layout-item>
+    
+            <!-- Center - Home Label -->
+            <lightning-layout-item size="7" class="home-label">
+                <h1>Home</h1>
+            </lightning-layout-item>
+    
+            <!-- Right - Icons (Refresh and Profile) -->
+            <lightning-layout-item size="2">
+                <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" class="refresh-icon"></lightning-button-icon>
+            </lightning-layout-item>
+            <lightning-layout-item size="2">
+                <lightning-button-icon icon-name="standard:user" alternative-text="Profile" class="profile-icon"></lightning-button-icon>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12">
+                <div class="header">
+                    <lightning-layout vertical-align="center">
+                        <lightning-layout-item size="12">
+                            <!-- Image of the crop -->
+                            <img src="https://media.istockphoto.com/id/1452266868/photo/cotton-plant.jpg?s=612x612&w=0&k=20&c=mtNsON32zUjlYDFN2P-cqu8B5p8I2n2OFR-a1HWdpJQ=" alt="Image" class="header-image" />
+                        </lightning-layout-item>
+                    </lightning-layout>    
+                    <lightning-layout vertical-align="center">
+                        <lightning-layout-item size="6" padding="around-small">
+                            <!-- Text Section -->
+                            <div class="header-text">
+                                <h2>अँप मित्र गट पुणे</h2>
+                                <p>Cotton</p>
+                            </div>
+                        </lightning-layout-item>
+                        
+                        <lightning-layout-item size="6" padding="around-small" class="text-align-right">
+                            <!-- Points Section -->
+                            <div class="points">
+                                <lightning-icon icon-name="utility:group" alternative-text="Group Icon" size="small"></lightning-icon>
+                                <span>Total Points: 5</span>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                    <lightning-layout vertical-align="center">
+                        <lightning-layout-item size="12" padding="around-small">
+                            <!-- Text Section -->
+                            <div class="header-text">
+                                <p>Total Area: 7.25 acr Gat Id: 1139</p>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <!-- Knowledge Section -->
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12">
+                <lightning-card title="Knowledge" icon-name="custom:custom52">
+                    <ul class="list">
+                        <li>
+                            <span>Designing a System of Good Practices</span>
+                            <span class="points">0/2</span>
+                        </li>
+                        <li>
+                            <span>Actual Implementation of good practices</span>
+                            <span class="points">0/15</span>
+                        </li>
+                        <li>
+                            <span>Peer to Peer Learning</span>
+                            <span class="points">0/3</span>
+                        </li>
+                    </ul>
+                </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <!-- Production Process Section -->
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12">
+                <lightning-card title="Production Process" icon-name="custom:custom53">
+                    <ul class="list">
+                        <li>
+                            <span>Joint Purchase of Inputs</span>
+                            <span class="points">0/10</span>
+                        </li>
+                        <li>
+                            <span>Irijk</span>
+                            <span class="points">0/10</span>
+                        </li>
+                    </ul>
+                </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <!-- Footer Navigation -->
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-button label="Home" variant="neutral" class="footer-btn" icon-name="utility:home"></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-button label="Diary" variant="neutral" class="footer-btn" icon-name="utility:notebook"></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

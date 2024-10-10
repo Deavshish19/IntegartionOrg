@@ -1,0 +1,99 @@
+.home-page {
+    background-color: white;
+}
+
+.header {
+    background-color: #fff5e1;
+    
+    margin-bottom: 5vw;
+}
+
+.header-image {
+    width: 100%;
+    height: 50vw;
+}
+
+.header-text h2 {
+    font-size: 4vw;
+    margin: 0;
+    font-weight: bold;
+}
+
+.header-text p {
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin: 0;
+}
+
+.points {
+    text-align: right;
+    font-weight: bold;
+    color: #ff8303;
+    font-size: 3.5vw;
+}
+
+.lightning-card {
+    margin-bottom: 5vw;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 4vw;
+}
+
+.points {
+    font-weight: bold;
+}
+
+.footer-btn {
+    font-size: 4vw;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.list .points{
+    padding-right: 5%;
+}
+
+.list span{
+    padding-left: 5%;
+}
+
+.top-header {
+    background-color: #ff8c00; /* Orange color */
+    display: flex;
+    align-items: center;
+}
+
+.home-label h1 {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+    color: white;
+    padding-left: 10%;
+}
+ .refresh-icon, .profile-icon {
+    color: white;
+}
+
+.profile-icon {
+    margin-right: 5px;
+}
+
+.menu-icon:hover{
+    background-color: #ff8c00;
+}
+.menu-item:hover{
+    background-color: #ff8c00;
+}

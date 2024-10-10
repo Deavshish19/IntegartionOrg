@@ -1,0 +1,73 @@
+.top-header {
+    background-color: #ff8c00; 
+    display: flex;
+    align-items: center;
+}
+
+.home-label {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+    color: white;
+    padding-left: 10%;
+
+}
+
+/* .back-button{
+    background-color: white;
+} */
+
+.member-list {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #eed4b5;
+}
+
+.member-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.member-name {
+    font-weight: bold;
+}
+
+.member-phone {
+    color: gray;
+}
+
+.role-badge {
+    margin-top: 5px;
+}
+
+.badge-admin {
+    background-color: green;
+    color: white;
+}
+
+.badge-member {
+    background-color: red;
+    color: white;
+}
+
+.member-acre {
+    font-weight: bold;
+    color: #333;
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #ddd;
+}

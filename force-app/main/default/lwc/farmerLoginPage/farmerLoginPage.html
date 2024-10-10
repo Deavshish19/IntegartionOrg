@@ -1,0 +1,69 @@
+<template>
+    <div class="login-container">
+        <div class="header">
+            <img src="https://lh3.googleusercontent.com/G7y3vBtEAOj6Af64bv83CuOAcK5uqyTcmxM9kSqUS7RgAMNSoOUgZjVGdqjlwq0VoH3Q-Lnu4rpz-IKgyeIXJhzwvVlqNhM6s4Zd-A=h200" alt="Farmer Image" class="header-image"/>
+        </div>
+        <div class="form-content">
+            <h2>Welcome to the Farmer Cup</h2>
+            <lightning-input
+                type="Phone"
+                label="Mobile Number"
+                placeholder="Enter Mobile Number"
+                onchange={handleMobileChange}
+                class="slds-var-p-bottom_small">
+            </lightning-input>
+            <lightning-button
+                label="Next"
+                variant="brand"
+                class="next-button"
+                onclick={handleNext}>
+            </lightning-button>
+            <div class="language-switch">
+                <label>English</label>
+                <lightning-input type="toggle" label="" onchange={handleLanguageChange}></lightning-input>
+                <label>Marathi</label>
+            </div>
+        </div>
+        <div class="footer">
+            <lightning-button label="About Us" variant="neutral" onclick={handleAboutUs}></lightning-button>
+            <lightning-button label="FAQ's" variant="neutral" onclick={handleFaq}></lightning-button>
+            <lightning-button label="Rules" variant="neutral" onclick={handleRules}></lightning-button>
+        </div>
+    </div>
+
+    <template if:true={showModal}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Header -->
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium">Login as:</h2>
+                </header>
+
+                <!-- Modal Body: Display the custom list of users with images -->
+                <div class="slds-modal__content">
+                    <div class="user-selection">
+                        <template for:each={userOptions} for:item="user">
+                            <div class="user-item" key={user.value}>
+                                <lightning-input type="radio"
+                                    name="loginOptions"
+                                    value={user.value}
+                                    onchange={handleUserSelection}>
+                                </lightning-input>
+                                <span class="user-label">{user.label}</span>
+                                <img src='data:image/jpeg;base64,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' alt={user.label} class="user-image"/>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- Modal Footer with Cancel and Continue Buttons -->
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Cancel" onclick={handleCancel} variant="neutral"></lightning-button>
+                    <lightning-button label="Continue" onclick={handleContinue} variant="brand"></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <!-- Backdrop for the modal -->
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>
