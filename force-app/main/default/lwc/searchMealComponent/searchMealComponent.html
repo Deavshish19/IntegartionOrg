@@ -1,0 +1,15 @@
+<template>
+    <div class="header">
+        <div class="header-content">
+            <h1 class="slds-text-align_center header-heading">Search your Favourite Meal</h1>
+            <div class="slds-grid slds-wrap slds-grid_align-center">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_8-of-12">
+                    <lightning-input type="search" label="mealSearch" placeholder="Enter Meal Name" variant="label-hidden" onchange={handleSearchChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12">
+                    <lightning-button label="Search" class="search-button" variant="destructive" onclick={handleSearchClick}></lightning-button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
