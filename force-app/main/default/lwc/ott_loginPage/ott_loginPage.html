@@ -1,0 +1,59 @@
+<template>
+    <template if:true={displayMainPage}>
+        <div class="Container">
+            <div class="frame1">
+                <img src={ottLogo} alt="Ott Image"></img>
+            </div>
+            <div class="frame2">
+              <!--   show login page  -->
+                <lightning-card title={cardTitle} class="card">
+                <template if:true={displayLoginContent}>    
+                    <lightning-input label="Phone Number" placeholder="Enter Phone Number" value={phoneNumber} 
+                    onchange={handlePhoneChange} required ></lightning-input>
+                    <template if:true={errorMessage}>
+                        <div class="error-message">{errorMessage}</div>
+                    </template>
+                    <div class="login">
+                        <lightning-button variant="brand" label="Login" onclick={handleLogin}></lightning-button>
+                    </div>
+                    <div class="create">
+                        <lightning-button variant="neutral" label="Create Account" onclick={handleCreate}></lightning-button>
+                    </div>
+                </template>
+                
+                <!-- if customer present show this section -->
+                <template if:false={displayLoginContent}>  
+                    <!-- <template if:true={customerDetails}> -->
+                        <div class="heading">
+                            <h1>Hi {customerDetails.First_Name__c} {customerDetails.Last_Name__c}, Welcome Back </h1>
+                        </div>
+                        <div class="button">
+                            <lightning-button label="Back" variant="neutral" onclick={handleBack}></lightning-button>
+                            <lightning-button label="Get Plan Details" variant="brand" onclick={handlePlanDetails} class="slds-p-left_small"></lightning-button>
+                        </div>   
+                    <!-- </template> -->
+                </template>
+
+                    <div class="loginLogo">
+                        <img src={loginLogo} alt="Salesforce image"></img>
+                    </div>
+            </lightning-card>
+            </div>
+            
+        </div>
+    </template>
+
+    <template if:true={displayCreateAccountPage}>
+        <c-ott_-create-account-page 
+            oncancel={handleCancel}
+            oncreation={handleCreation}>
+        </c-ott_-create-account-page>
+    </template>
+
+    <template if:true={displayPlanDetailPage}>
+        <c-ott_-plan-details 
+        onplanback={handlePlanBack} customer-id={customerId}></c-ott_-plan-details>
+    </template>
+
+    
+</template>

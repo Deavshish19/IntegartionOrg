@@ -1,0 +1,53 @@
+.Container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.frame1{
+    width: 30%;
+    border: 2px solid red;
+    background-color:rgb(224 224 244 / 100%);
+    padding: 20px;
+    margin: 20px;
+}
+
+.frame2{
+    width: 70%;
+    border: 2px solid red;
+    background-color:  rgb(224 224 244 / 100%);
+    padding: 20px;
+    margin: 20px;
+}
+.plan{
+    padding-top: 30px;
+}
+
+.plan h2{
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration-line: underline;
+    padding-bottom: 15px;
+}
+
+.plan .detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+    margin-right: 20px;
+}
+.plan .label {
+    font-weight: bold;
+}
+
+.plan .value{
+    text-align: left;
+}
+
+.input{
+    width: 50px;
+    padding-right: 5px;
+}
+
+.yyinput{
+    width: 60px;
+}

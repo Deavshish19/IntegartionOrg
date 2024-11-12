@@ -1,0 +1,60 @@
+.Container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.frame1{
+    width: 60%;
+    border: 2px solid red;
+    background-color: rgb(131, 131, 240);
+    padding: 20px;
+    margin: 20px;
+}
+
+.frame2{
+    width: 40%;
+    border: 2px solid red;
+    background-color: rgb(131, 131, 240);
+    padding: 20px;
+    margin: 20px;
+}
+
+.card{
+    height: 100%;
+    display: grid;
+}
+
+.login {
+    text-align: center;
+    padding: 20px;
+}
+
+.create {
+    text-align: center;
+    
+}
+
+.frame2 lightning-input {
+    margin: 10px 10px 0px 15px;
+    width: auto;
+}
+
+.loginLogo{
+    text-align: center;
+    padding: 30px;
+}
+
+.error-message{
+    padding-left: 15px;
+    font-weight: bold;
+    color: red;
+}
+
+.button{
+    text-align: center;
+}
+
+.heading{
+    margin:18px;
+    font-weight: bold;
+}
