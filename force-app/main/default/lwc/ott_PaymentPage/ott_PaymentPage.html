@@ -1,0 +1,72 @@
+<template>
+    <lightning-card title="Payment Details">
+        <div class="slds-var-m-around_medium Container">
+            <div class="frame1">
+                <lightning-radio-group
+                    name="cardType"
+                    label="Select Card"
+                    options={options}
+                    value={cardType}
+                    type="radio"
+                    onchange={handleChange}>
+                </lightning-radio-group>
+                <div class="plan">
+                    <h2>Plan Details</h2>
+                    <div class="detail">
+                        <span class="label">Plan Name:</span>
+                        <span class="value">{planDetails.planName}</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Plan Type:</span>
+                        <span class="value">{planDetails.planType}</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Amount:</span>
+                        <span class="value">{planDetails.planAmount}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="frame2">
+                <lightning-input
+                    type="text"
+                    label="Card Number"
+                    name="cardNumber"
+                    value={cardNumber}
+                    onchange={handleChange}>
+                </lightning-input>
+
+                <div class="slds-grid slds-wrap">
+                    <lightning-input
+                        type="text"
+                        label="MM"
+                        name="mm"
+                        value={mm}
+                        onchange={handleChange}
+                        class="input">
+                    </lightning-input>
+                    <lightning-input
+                        type="text"
+                        label="YY"
+                        name="yy"
+                        value={yy}
+                        onchange={handleChange}
+                        class="yyinput">
+                    </lightning-input>
+                </div>
+                <lightning-input
+                    type="text"
+                    label="Name On Card"
+                    name="name"
+                    value={name}
+                    onchange={handleChange}>
+                </lightning-input>
+
+            </div>
+        </div>
+
+        <div class="slds-align_absolute-center">
+            <lightning-button label="Back" variant="neutral" onclick={backButton}></lightning-button>
+            <lightning-button label="Submit" variant="brand" onclick={handleSubmit} class="slds-var-p-left_small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

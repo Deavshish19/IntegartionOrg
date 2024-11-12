@@ -1,0 +1,30 @@
+<template>
+  <template if:true={displayPlanDetails}>
+    <lightning-card title="Plan Details">
+        <lightning-datatable
+            key-field="id"
+            data={planDetails}
+            columns={columns}
+            hide-checkbox-column>
+        </lightning-datatable>
+        <div class="slds-align_absolute-center slds-var-p-around_medium">
+            <lightning-button 
+              variant="neutral"
+              label="Back Home" 
+              onclick={handleBack} >
+            </lightning-button>
+
+            <lightning-button 
+              variant="brand"
+              label="Select Plan" 
+              onclick={handleSelectPlan} 
+              class="slds-p-left_small">
+            </lightning-button>
+        </div>
+    </lightning-card>
+  </template>
+
+    <template if:true={displaySelectPlan}>
+      <c-ott_-select-plan-page plan-data={planDetails} onbacktoplandetails={handleBackToPlanDetails} customer-id={customerId}></c-ott_-select-plan-page>
+    </template>
+</template>

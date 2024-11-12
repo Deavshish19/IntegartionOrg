@@ -1,0 +1,41 @@
+<template>
+    <template if:true={displaySelectPlanPage}>
+        <lightning-card title="Select Plan">
+            <div class="slds-align_absolute-center">
+                <label>Select Plan:</label> &nbsp; &nbsp;
+                <select onchange={handleSelectChange}>
+                    <option value="Select">--Select--</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Quarterly">Quaterly</option>
+                    <option value="Half-yearly">Half-yearly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+
+            <template lwc:if={selectedPlan}>
+                <div>
+                    <lightning-datatable
+                        key-field="id"
+                        data={planData}
+                        columns={planColumns}
+                        max-row-selection="1"
+                        onrowselection={handleRowSelection}>
+                    </lightning-datatable>
+                </div>
+                <div
+                    class="slds-align_absolute-center slds-var-p-around_medium">
+                    <lightning-button label="Back" variant="neutral"
+                        onclick={handleBackToPlanDetails}></lightning-button>
+                    <lightning-button label="Make Payment" variant="brand"
+                        onclick={handlePayment}
+                        class="slds-var-p-left_small"></lightning-button>
+                </div>
+            </template>
+
+        </lightning-card>
+    </template>
+    <template if:true={displayPaymentPage}>
+        <c-ott_-payment-page plan-details={planInfo} onbacktoselectplan={handleBackToSelectPlan} customer-id={customerId}></c-ott_-payment-page>
+    </template>
+
+</template>
